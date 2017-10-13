@@ -1,0 +1,2 @@
+# SolMRPC
+SoLID MRPC digitization
