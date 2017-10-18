@@ -1,0 +1,53 @@
+SoLID MRPC post-Geant4 simulation
+
+src/
+utlSolidBase.C
+SolMRPCStrip.C
+SolMRPCdigit.C
+
+utlSolidBase.h
+SolMRPCStrip.h
+SolMRPCdigit.h
+SolidConst.h
+
+auto build:
+autogen.sh
+configure.ac
+Makefile.am
+
+Example running macro can be found from:
+macros/
+run_mrpc.C
+
+----------------------
+
+How to build:
+
+> mkdir build
+> cd build
+> ../src/autogen.sh --prefix=/where you want to install/
+> make
+> make install
+
+(You may need to modify autogen.sh depending on where libtoolize is installed)
+
+----------------------
+
+How to run:
+
+Set LD_LIBRARY_PATH if necessary
+> setenv LD_LIBRARY_PATH /where/you/install/lib:$LD_LIBRARY_PATH (csh)
+> export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/where/you/install/lib  (bash)
+
+Modify run_mrpc.C as needed.
+- Set the charge threshold using SetQthreshold (unit: pC)
+- Set # of events you want to process. See an example in run_mrpc.C. Modify inputs for "process" function.
+#1: # of events you want to process. For all events, set it to 0.
+#2: # of total generated events (used to caculate rate for BeamonTarget simulation)
+
+> root -b
+> .x run_mrpc.C("input file path/file name", "output file path/name", # of event
+
+----------------------
+
+Contact: sanghwa@jlab.org
