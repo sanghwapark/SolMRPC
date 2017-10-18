@@ -1,1 +1,56 @@
 output tree variables
+
+EvtNumber       Event number from the GEMC output
+rate            rate
+pid             particle id
+mpid            mother pid
+tid             track id
+mtid            mother particle track id
+
+gen_px          Generated particle momentum
+gen_py          Generated particle momentum
+gen_pz          Generated particle momentum
+gen_vx          Generated particle vertex information
+gen_vy          Generated particle vertex information
+gen_vz          Generated particle vertex information
+
+timeLeading     Leading-edge timing (when induced charge > threshold)
+ToT             Time over threshold
+timeRef         Reference timing (use virtual front plane timing information now)
+totcharge       Total induced charge
+fastCharge[200] Induced charge at each step
+
+# Particle information at virtual (front) plane
+vp_x            average x position of a particle at virtual (front) plane
+vp_y            average y position of a particle at virtual (front) plane
+vp_z            average z position of a particle at virtual (front) plane
+vp_vx           vertex information of the particle at virtual (front) plane
+vp_vy		        vertex information of the particle at virtual (front) plane
+vp_vz		        vertex information of the particle at virtual (front) plane
+vp_px		momentum information of the particle at virtual (front) plane
+vp_py		momentum information of the particle at virtual (front) plane
+vp_pz		momentum information of the particle at virtual (front) plane
+
+vp_module	MRPC module ID based on the position at virtual plane
+vp_strip	MRPC strip ID based on the position at virtual plane
+trackE		Energy of the track at virtual plane
+
+# MRPC gas gaps
+pid_in_gas[10]	particle id in each gas gap (0-9)
+tid_in_gas[10]	track id in each gas gap (0-9)
+mpid_in_gas[10]	mother pid in each gas gap (0-9)
+mtid_in_gas[10]	mother track id	in each	gas gap	(0-9)
+E[10]		particle energy	in each	gas gap (0-9)
+edep[10]	Total energy deposit by the particle in each gas gap	(0-9)
+nion[10]	total number of	primary	e-ion pairs by the particle in each gas	gap (0-9)
+x[10]		average x position of the particle in each gas gap
+y[10]		average y position of the particle in each gas gap
+z[10]		average z position of the particle in each gas gap
+px[10]		momentum of the particle in each gas gap
+py[10]		momentum of the particle in each gas gap
+pz[10]		momentum of the particle in each gas gap
+
+nAvalanche
+charge[10]      Total induced charge in each gas gap
+module[10]      MRPC module ID based on the average position in each gas gap
+strip[10]       MRPC module ID based on the average position in each gas gap
